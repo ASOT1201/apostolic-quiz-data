@@ -1,192 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Principles of Biblical Interpretation – Quiz</title>
+<meta charset="UTF-8">
+<title>Bronze Module 103 – Principles of Biblical Interpretation</title>
+<style>
+    body {
+        background: #111;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h1, h2 {
+        color: #ff2a2a;
+        text-align: center;
+    }
+    .quiz-container {
+        max-width: 900px;
+        margin: auto;
+        background: #000;
+        padding: 25px;
+        border: 1px solid #ff2a2a;
+        border-radius: 8px;
+    }
+    label {
+        display: block;
+        margin: 8px 0;
+        color: #fff;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        background: #222;
+        border: 1px solid #555;
+        color: #fff;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    button {
+        background: #ff2a2a;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover {
+        background: #cc0000;
+    }
+    .section-title {
+        color: #ff2a2a;
+        margin-top: 30px;
+        font-size: 22px;
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
+    }
+    #thanksMessage {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 6px;
+        background: #132a13;
+        border: 1px solid #2e7d32;
+        color: #c8ffcb;
+        text-align: center;
+    }
+</style>
 </head>
 <body>
 
-  <h1>Principles of Biblical Interpretation / Hermeneutics</h1>
-  <h2>Student Assessment – Module Quiz</h2>
-
-  <p><strong>Instructions:</strong> Answer all questions. When finished, click
-    <em>Submit Test</em>. Your email program will open with your answers in the
-    message body. Review and send the email to your instructor.</p>
-
-  <!-- IMPORTANT: change the email address below -->
-  <form action="mailto:youremail@example.com?subject=Hermeneutics%20Quiz%20Submission"
-        method="post"
-        enctype="text/plain">
-
-    <h3>Student Information</h3>
-
-    <p>
-      <label>Full Name:<br>
-        <input type="text" name="Student_Name" required>
-      </label>
+<div class="quiz-container">
+    <h1>Bronze Module 103</h1>
+    <h2>Principles of Biblical Interpretation (Hermeneutics)</h2>
+    <p style="text-align:center;">
+        Please complete the student information section and answer each question carefully.
+        When you submit, a confirmation will appear on this page. No email program will open.
     </p>
 
-    <p>
-      <label>Email:<br>
-        <input type="email" name="Student_Email" required>
-      </label>
-    </p>
+    <!-- No mailto – browser-only handling -->
+    <form id="quizForm103" onsubmit="handleSubmit(event)">
 
-    <p>
-      <label>Date:<br>
-        <input type="text" name="Date" placeholder="MM/DD/YYYY">
-      </label>
-    </p>
+        <!-- STUDENT INFO SECTION -->
+        <h2 class="section-title">Student Information</h2>
 
-    <hr>
+        <label>Student Name:</label>
+        <input type="text" name="student_name" required>
 
-    <h3>Part A – True or False</h3>
+        <label>Student Number:</label>
+        <input type="text" name="student_number" required>
 
-    <p>
-      1. Hermeneutics is the study of the principles and methods of interpreting the Bible.<br>
-      <label><input type="radio" name="Q1" value="True" required> True</label><br>
-      <label><input type="radio" name="Q1" value="False"> False</label>
-    </p>
+        <label>Email:</label>
+        <input type="email" name="student_email" required>
 
-    <p>
-      2. Because the Bible is inspired, Spirit-filled believers do not need any rules of interpretation.<br>
-      <label><input type="radio" name="Q2" value="True" required> True</label><br>
-      <label><input type="radio" name="Q2" value="False"> False</label>
-    </p>
+        <label>Date:</label>
+        <input type="date" name="date_submitted" required>
 
-    <p>
-      3. The grammatical–historical method seeks to understand what the biblical author meant in the original context.<br>
-      <label><input type="radio" name="Q3" value="True" required> True</label><br>
-      <label><input type="radio" name="Q3" value="False"> False</label>
-    </p>
 
-    <p>
-      4. According to Scripture, no prophecy of the Scripture is of any private interpretation.<br>
-      <label><input type="radio" name="Q4" value="True" required> True</label><br>
-      <label><input type="radio" name="Q4" value="False"> False</label>
-    </p>
+        <!-- QUIZ QUESTIONS -->
+        <h2 class="section-title">Quiz Questions</h2>
 
-    <p>
-      5. Context is not very important as long as a verse sounds like it supports what we already believe.<br>
-      <label><input type="radio" name="Q5" value="True" required> True</label><br>
-      <label><input type="radio" name="Q5" value="False"> False</label>
-    </p>
+        <h3>1. In your own words, define “biblical hermeneutics.”</h3>
+        <textarea name="q1"></textarea>
 
-    <hr>
+        <h3>2. True or False: A literal interpretation means we ignore figures of speech and read every verse in a wooden, rigid way.</h3>
+        <label><input type="radio" name="q2" value="True"> True</label>
+        <label><input type="radio" name="q2" value="False"> False</label>
 
-    <h3>Part B – Multiple Choice</h3>
+        <h3>3. Fill in the blanks: Sound interpretation must consider the _______ setting and the _______ setting of a passage.</h3>
+        <textarea name="q3"></textarea>
 
-    <p>
-      6. The primary New Testament verse that speaks of “rightly dividing the word of truth” is:<br>
-      <label><input type="radio" name="Q6" value="A" required> A. 1 Timothy 3:16</label><br>
-      <label><input type="radio" name="Q6" value="B"> B. 2 Timothy 2:15</label><br>
-      <label><input type="radio" name="Q6" value="C"> C. 2 Peter 1:21</label><br>
-      <label><input type="radio" name="Q6" value="D"> D. Acts 2:38</label>
-    </p>
+        <h3>4. Which term best describes interpreting a verse in light of the verses before and after it?</h3>
+        <label><input type="radio" name="q4" value="Immediate context"> Immediate context</label>
+        <label><input type="radio" name="q4" value="Tradition"> Tradition</label>
+        <label><input type="radio" name="q4" value="Opinion"> Opinion</label>
+        <label><input type="radio" name="q4" value="Speculation"> Speculation</label>
 
-    <p>
-      7. Which statement best describes the role of the Holy Spirit in interpretation?<br>
-      <label><input type="radio" name="Q7" value="A" required> A. The Spirit replaces the need for study.</label><br>
-      <label><input type="radio" name="Q7" value="B"> B. The Spirit helps illuminate the meaning, but does not contradict Scripture.</label><br>
-      <label><input type="radio" name="Q7" value="C"> C. The Spirit gives new revelations that can cancel written Scripture.</label><br>
-      <label><input type="radio" name="Q7" value="D"> D. The Spirit only helps pastors, not ordinary believers.</label>
-    </p>
+        <h3>5. Give one example of a passage that uses figurative language (such as metaphor, simile, personification, or symbolism) and briefly describe the figure of speech.</h3>
+        <textarea name="q5"></textarea>
 
-    <p>
-      8. “Scripture interprets Scripture” means:<br>
-      <label><input type="radio" name="Q8" value="A" required> A. We can ignore difficult passages.</label><br>
-      <label><input type="radio" name="Q8" value="B"> B. We should allow clearer passages to shed light on harder ones.</label><br>
-      <label><input type="radio" name="Q8" value="C"> C. We may interpret Scripture any way we like.</label><br>
-      <label><input type="radio" name="Q8" value="D"> D. Only the Old Testament can interpret the New.</label>
-    </p>
+        <h3>6. True or False: The same verse can never have both a literal sense and an application that is spiritual or symbolic.</h3>
+        <label><input type="radio" name="q6" value="True"> True</label>
+        <label><input type="radio" name="q6" value="False"> False</label>
 
-    <p>
-      9. Which of the following is <em>not</em> a major literary genre of the Bible?<br>
-      <label><input type="radio" name="Q9" value="A" required> A. Poetry</label><br>
-      <label><input type="radio" name="Q9" value="B"> B. Narrative</label><br>
-      <label><input type="radio" name="Q9" value="C"> C. Apocalyptic</label><br>
-      <label><input type="radio" name="Q9" value="D"> D. Science fiction</label>
-    </p>
+        <h3>7. Fill in the blank: A _______ is a comparison using “like” or “as,” while a _______ is a direct comparison without “like” or “as.”</h3>
+        <textarea name="q7"></textarea>
 
-    <p>
-      10. The Shema (“Hear, O Israel, the LORD our God is one LORD”) is found in:<br>
-      <label><input type="radio" name="Q10" value="A" required> A. Genesis 1:1</label><br>
-      <label><input type="radio" name="Q10" value="B"> B. Deuteronomy 6:4</label><br>
-      <label><input type="radio" name="Q10" value="C"> C. Psalm 23:1</label><br>
-      <label><input type="radio" name="Q10" value="D"> D. John 1:1</label>
-    </p>
+        <h3>8. Which of the following best describes “exegesis”?</h3>
+        <label><input type="radio" name="q8" value="Reading meaning into the text"> Reading our own meaning into the text</label>
+        <label><input type="radio" name="q8" value="Drawing meaning out of the text"> Carefully drawing the meaning out of the text</label>
+        <label><input type="radio" name="q8" value="Ignoring the text"> Ignoring the text and following impressions</label>
 
-    <p>
-      11. The grammatical–historical method pays close attention to all of the following <em>except</em>:<br>
-      <label><input type="radio" name="Q11" value="A" required> A. Grammar and word meaning</label><br>
-      <label><input type="radio" name="Q11" value="B"> B. Historical and cultural background</label><br>
-      <label><input type="radio" name="Q11" value="C"> C. Author’s intent and audience</label><br>
-      <label><input type="radio" name="Q11" value="D"> D. Our personal feelings about the text</label>
-    </p>
+        <h3>9. What is “eisegesis,” and why is it dangerous in biblical interpretation?</h3>
+        <textarea name="q9"></textarea>
 
-    <p>
-      12. Apostolic hermeneutics places special emphasis on:<br>
-      <label><input type="radio" name="Q12" value="A" required> A. Church tradition above Scripture.</label><br>
-      <label><input type="radio" name="Q12" value="B"> B. The Apostles’ doctrine and the practice of the early church in Acts.</label><br>
-      <label><input type="radio" name="Q12" value="C"> C. Later creeds as the final authority.</label><br>
-      <label><input type="radio" name="Q12" value="D"> D. Ignoring the Old Testament.</label>
-    </p>
+        <h3>10. True or False: A text of Scripture can never mean what it never meant to the original audience.</h3>
+        <label><input type="radio" name="q10" value="True"> True</label>
+        <label><input type="radio" name="q10" value="False"> False</label>
 
-    <hr>
+        <h3>11. List at least three key questions a Bible student should ask when interpreting a passage (for example: Who? What? When? Where? Why? How?).</h3>
+        <textarea name="q11"></textarea>
 
-    <h3>Part C – Short Answer</h3>
+        <h3>12. Which option best describes “historical-grammatical” interpretation?</h3>
+        <label><input type="radio" name="q12" value="Only spiritual meanings"> Only looks for spiritual, hidden meanings</label>
+        <label><input type="radio" name="q12" value="Focus on history and grammar"> Focuses on the historical background and grammatical structure to find the author’s intended meaning</label>
+        <label><input type="radio" name="q12" value="Depends on tradition alone"> Depends entirely on church tradition</label>
 
-    <p>
-      13. In your own words, explain why hermeneutics is necessary even though the Bible is inspired by God.<br>
-      <textarea name="Q13" rows="3"></textarea>
-    </p>
+        <h3>13. Give a brief example of how ignoring historical background can lead to a wrong interpretation of a verse or passage.</h3>
+        <textarea name="q13"></textarea>
 
-    <p>
-      14. Describe what it means to interpret a passage in its <em>context</em>. Include at least two levels of context (for example, verse, chapter, book, covenant, whole Bible).<br>
-      <textarea name="Q14" rows="3"></textarea>
-    </p>
+        <h3>14. True or False: Parables should normally be interpreted by focusing on the main point, not by giving every detail its own mystical meaning.</h3>
+        <label><input type="radio" name="q14" value="True"> True</label>
+        <label><input type="radio" name="q14" value="False"> False</label>
 
-    <p>
-      15. Give one example of how misunderstanding biblical genre can lead to a wrong interpretation.<br>
-      <textarea name="Q15" rows="3"></textarea>
-    </p>
+        <h3>15. Fill in the blank: “Scripture interprets ________.” Explain what this principle means.</h3>
+        <textarea name="q15"></textarea>
 
-    <p>
-      16. Explain how understanding covenants (Old vs New) affects the way we apply certain commands or practices today.<br>
-      <textarea name="Q16" rows="3"></textarea>
-    </p>
+        <h3>16. Which of the following is the best approach when encountering difficult or unclear passages?</h3>
+        <label><input type="radio" name="q16" value="Use obscure to override clear"> Use obscure texts to overrule clear ones</label>
+        <label><input type="radio" name="q16" value="Use clear to interpret difficult"> Use clear passages to help interpret difficult ones</label>
+        <label><input type="radio" name="q16" value="Ignore context"> Ignore context and choose the meaning we like</label>
 
-    <p>
-      17. Why is it important, from an Apostolic perspective, to interpret Matthew 28:19 in harmony with the book of Acts?<br>
-      <textarea name="Q17" rows="3"></textarea>
-    </p>
+        <h3>17. Describe the danger of building doctrine on a single verse taken out of its broader context.</h3>
+        <textarea name="q17"></textarea>
 
-    <p>
-      18. Briefly explain the phrase “Scripture interprets Scripture” and give one practical example.<br>
-      <textarea name="Q18" rows="3"></textarea>
-    </p>
+        <h3>18. True or False: Right interpretation must always lead to right application; we are responsible not only to understand but also to obey the Word.</h3>
+        <label><input type="radio" name="q18" value="True"> True</label>
+        <label><input type="radio" name="q18" value="False"> False</label>
 
-    <p>
-      19. How does the Oneness understanding of the Godhead influence the way we interpret passages about the Father, Son, and Holy Ghost?<br>
-      <textarea name="Q19" rows="3"></textarea>
-    </p>
+        <h3>19. Explain the difference between “descriptive” passages (that describe what happened) and “prescriptive” passages (that command what should happen), and why this matters in hermeneutics.</h3>
+        <textarea name="q19"></textarea>
 
-    <p>
-      20. List two personal habits that can help you grow as a sound interpreter of the Bible (for example, prayer, holiness, consistent study). Explain briefly why each one matters.<br>
-      <textarea name="Q20" rows="3"></textarea>
-    </p>
+        <h3>20. In two or three sentences, summarize why sound principles of biblical interpretation are especially important for Apostolic, Oneness ministers and teachers.</h3>
+        <textarea name="q20"></textarea>
 
-    <p>
-      <input type="submit" value="Submit Test">
-      <input type="reset" value="Clear Answers">
-    </p>
+        <button type="submit">Submit Quiz</button>
 
-    <p><small>
-      Note: When you click “Submit Test,” your email program should open with your answers.
-      If nothing happens, copy your answers and email them manually to your instructor.
-    </small></p>
+        <div id="thanksMessage">
+            Thank you! Your quiz for Bronze Module 103 – Principles of Biblical Interpretation has been submitted.
+            Please notify your instructor that you have completed this module.
+        </div>
 
-  </form>
+    </form>
+</div>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent navigation or email client
+    document.getElementById('thanksMessage').style.display = 'block';
+}
+</script>
 
 </body>
 </html>
