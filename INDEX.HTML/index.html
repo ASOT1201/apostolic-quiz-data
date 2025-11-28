@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostolic School of Theology – Online Campus</title>
+
+  <!-- Optional stylesheet (you may create this later) -->
+  <link rel="stylesheet" href="assets/styles.css">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #c00;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    .nav {
+      margin-top: 10px;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 1px solid #c00;
+      border-radius: 4px;
+      margin: 0 5px;
+    }
+    .nav a:hover {
+      background: #c00;
+    }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    h2 {
+      color: #c00;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+    }
+    ul li { margin: 12px 0; }
+    ul li a { color: #0af; text-decoration: none; }
+    ul li a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      background: #000;
+      border-top: 2px solid #c00;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Apostolic School of Theology</h1>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="hermeneutics/">Hermeneutics Campus</a>
+    <a href="quizzes/">Quiz Center</a>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Welcome to the Online Campus</h2>
+  <p>
+    Explore Apostolic theology, doctrinal studies, ministerial training, and fully interactive student quizzes.
+  </p>
+
+  <h2>Courses Available</h2>
+  <ul>
+    <li><a href="hermeneutics/">▶ Principles of Biblical Interpretation / Hermeneutics</a></li>
+    <li>Doctrine of Salvation</li>
+    <li>The Foundations of Faith</li>
+    <li>The Doctrine of Repentance</li>
+    <li>The Doctrines of Baptisms</li>
+    <li>The Name of Jesus</li>
+  </ul>
+
+  <h2>Student Quiz Center</h2>
+  <ul>
+    <li><a href="quizzes/intro-apostolic-theology-01.html">Intro to Apostolic Theology Quiz</a></li>
+    <li><a href="quizzes/mystery-of-godliness-01.html">Mystery of Godliness Quiz</a></li>
+  </ul>
+</div>
+
+<footer>
+  &copy; <span id="year"></span> Apostolic School of Theology – All Rights Reserved
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
