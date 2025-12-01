@@ -1,102 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ASOT – Apostolic School of Theology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-    body {
-        margin: 0;
-        background: #0d0d0d;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        text-align: center;
-    }
-
-    header {
-        padding: 20px;
-        background: #000;
-        border-bottom: 2px solid #ff2a2a;
-    }
-
-    h1 {
-        color: #ff2a2a;
-        margin: 10px 0;
-        font-size: 2.5rem;
-        letter-spacing: 2px;
-    }
-
-    p.tagline {
-        color: #ccc;
-        font-size: 1.1rem;
-        margin-top: -10px;
-    }
-
-    /* Navigation Buttons */
-    .nav-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 40px auto;
-        gap: 20px;
-        width: 90%;
-        max-width: 900px;
-    }
-
-    .nav-btn {
-        background: #ff2a2a;
-        padding: 15px 25px;
-        font-size: 1.2rem;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        width: 260px;
-        text-align: center;
-    }
-
-    .nav-btn:hover {
-        background: #cc0000;
-    }
-
-    footer {
-        margin-top: 60px;
-        font-size: 0.9rem;
-        color: #777;
-        padding-bottom: 40px;
-    }
-</style>
+  <meta charset="UTF-8">
+  <title>Apostolic School of Theology – Online Campus</title>
+  <link rel="stylesheet" href="assets/main.css">
 </head>
-
 <body>
 
-<header>
-    <img src="https://github.com/ASOT1201/apostolic-quiz-data/raw/main/assets/images/logo.png"
-         alt="ASOT Logo"
-         style="width:150px; height:auto; margin-bottom: 10px;">
-
-    <h1>Apostolic School of Theology</h1>
-    <p class="tagline">Your Pathway to Apostolic Excellence</p>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="branding">
+      <div class="logo-mark">ASOT</div>
+      <div class="brand-text">
+        <div class="brand-name">Apostolic School of Theology</div>
+        <div class="brand-subtitle">Online Learning Portal</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="hermeneutics/">Hermeneutics Campus</a>
+      <a href="quizzes/">Quizzes</a>
+    </nav>
+  </div>
 </header>
 
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Welcome to the Apostolic School of Theology</h1>
+      <p class="hero-tagline">
+        A world-class Apostolic / Oneness theological training center powered by AI teaching tools,
+        ministerial resources, doctrinal courses, quizzes, and complete minister development.
+      </p>
+      <div class="hero-actions">
+        <a href="hermeneutics/" class="btn-primary">Enter Hermeneutics Campus</a>
+        <a href="quizzes/" class="btn-outline">View Quizzes</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Navigation buttons -->
-<div class="nav-container">
-    <a class="nav-btn" href="hermeneutics/index.html">Hermeneutics Campus</a>
-    <a class="nav-btn" href="quizzes/index.html">Quizzes & Exams</a>
-    <a class="nav-btn" href="doctrine/index.html">Apostolic Doctrine</a>
-    <a class="nav-btn" href="resources/index.html">Student Resources</a>
-    <a class="nav-btn" href="courses/index.html">Degree Programs</a>
-    <a class="nav-btn" href="about/index.html">About ASOT</a>
-</div>
+<section class="section">
+  <div class="container">
+    <h2>Courses Available</h2>
+    <ul>
+      <li><a href="hermeneutics/">Principles of Biblical Interpretation / Hermeneutics</a></li>
+      <li>Doctrine of Salvation</li>
+      <li>The Foundations of Faith</li>
+      <li>The Doctrine of Repentance</li>
+      <li>The Doctrines of Baptisms</li>
+      <li>The Name of Jesus</li>
+    </ul>
+  </div>
+</section>
 
-
-<footer>
-    © 2025 Apostolic School of Theology — ASOT1201  
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Apostolic School of Theology – All Rights Reserved</p>
+  </div>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
