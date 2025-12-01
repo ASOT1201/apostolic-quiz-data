@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apostolic School of Theology (ASOT)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apostolic School of Theology (ASOT) - an online Apostolic, Oneness Pentecostal training center offering doctrinally sound Bible courses, quizzes, and certificates.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0f;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: #050507;
+      border-bottom: 2px solid #ff2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-section img {
+      height: 56px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-weight: bold;
+      font-size: 1.1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+
+    nav ul li a {
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav ul li a:hover {
+      border-bottom: 2px solid #ff2a2a;
+    }
+
+    .hero {
+      padding: 70px 0 60px;
+      background: radial-gradient(circle at top left, #ff2a2a33, transparent 55%),
+                  radial-gradient(circle at bottom right, #1e90ff33, transparent 55%);
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 3fr 2fr;
+        align-items: center;
+      }
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 18px;
+    }
+
+    .hero-tagline {
+      font-size: 0.95rem;
+      color: #c7c7c7;
+      margin-bottom: 22px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #ff2a2a;
+      color: #fff;
+      box-shadow: 0 0 14px rgba(255, 42, 42, 0.45);
+    }
+
+    .btn-primary:hover {
+      background: #ff4545;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #888;
+      color: #f5f5f5;
+    }
+
+    .btn-secondary:hover {
+      border-color: #ff2a2a;
+      color: #ffbbbb;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: #b0b0b0;
+    }
+
+    .hero-card {
+      border-radius: 16px;
+      padding: 20px;
+      background: linear-gradient(135deg, #121220, #191929);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.4);
+      border: 1px solid #272742;
+    }
+
+    .hero-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-card p {
+      font-size: 0.95rem;
+      color: #d6d6d6;
+      margin-bottom: 8px;
+    }
+
+    .hero-card small {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      margin-bottom: 26px;
+      color: #c0c0c0;
+    }
+
+    .two-column {
+      display: grid;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .two-column {
+        grid-template-columns: 3fr 2fr;
+      }
+    }
+
+    .card {
+      background: #15151f;
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid #262636;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #d2d2d2;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 3px 10px;
+      background: #262640;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffbbbb;
+      margin-bottom: 6px;
+    }
+
+    .course-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .course-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .course-card {
+      background: #14141f;
+      border-radius: 12px;
+      padding: 14px 14px 16px;
+      border: 1px solid #27273c;
+    }
+
+    .course-card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    .course-tag {
+      font-size: 0.75rem;
+      color: #ff9f9f;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .course-meta {
+      font-size: 0.78rem;
+      color: #a4a4a4;
+      margin-top: 6px;
+    }
+
+    .quiz-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .quiz-list li {
+      margin-bottom: 6px;
+    }
+
+    .quiz-list a {
+      color: #7fd0ff;
+    }
+
+    .quiz-list a:hover {
+      text-decoration: underline;
+    }
+
+    .skool-section {
+      background: #101018;
+      border-top: 1px solid #252535;
+      border-bottom: 1px solid #252535;
+    }
+
+    .skool-highlight {
+      background: #151525;
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid #29294a;
+    }
+
+    .skool-highlight h3 {
+      margin-bottom: 6px;
+      font-size: 1.02rem;
+    }
+
+    .skool-highlight p {
+      font-size: 0.9rem;
+      color: #d4d4d4;
+      margin-bottom: 10px;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .contact-list li {
+      margin-bottom: 6px;
+    }
+
+    footer {
+      padding: 20px 0 24px;
+      background: #050507;
+      border-top: 1px solid #262636;
+      font-size: 0.8rem;
+      color: #9d9d9d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="logo-section">
+          <img src="assets/images/asot-logo.png" alt="ASOT Logo">
+          <div class="logo-text">Apostolic School of Theology</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#quizzes">Quizzes</a></li>
+            <li><a href="#skool">Skool Campus</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill">Apostolic • Oneness • Bible-Centered</div>
+        <h1 class="hero-title">Apostolic School of Theology</h1>
+        <p class="hero-subtitle">
+          Training ministers, teachers, and believers in sound Apostolic doctrine — online, exam-based, and Christ-centered.
+        </p>
+        <p class="hero-tagline">
+          Study foundational doctrines, complete online quizzes, and access the full ASOT campus and community through our Skool platform.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn-primary" href="https://www.skool.com/apostolic-school-of-theology" target="_blank" rel="noopener">
+            Enter Skool Campus
+          </a>
+          <a class="btn-secondary" href="#quizzes">
+            View Online Quizzes
+          </a>
+        </div>
+
+        <p class="hero-meta">
+          Courses include: Introduction to Apostolic Theology, Surveys of the Old & New Testament,
+          Doctrine of Salvation, Foundations of Faith, Repentance, Doctrines of Baptisms, and The Name of Jesus.
+        </p>
+      </div>
+
+      <div>
+        <div class="hero-card">
+          <h3>Online Apostolic Training</h3>
+          <p>
+            ASOT combines written curriculum, HTML-based exams, and the Skool learning platform to deliver
+            Apostolic theological education worldwide.
+          </p>
+          <small>
+            • Self-paced modules<br>
+            • Email-submitted HTML exams<br>
+            • Community coaching & mentorship
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container two-column">
+      <div>
+        <h2 class="section-title">About ASOT</h2>
+        <p class="section-subtitle">
+          The Apostolic School of Theology exists to preserve Apostolic doctrine and equip believers
+          for effective ministry, discipleship, and evangelism.
+        </p>
+
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p>
+            To provide doctrinally sound, Bible-based Apostolic training using a modern online platform.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Our Distinctives</h3>
+          <p>
+            • Oneness Pentecostal theology<br>
+            • Scripture-centered instruction<br>
+            • Practical ministry application<br>
+            • Fully online delivery<br>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>How It Works</h3>
+          <p>
+            1. Join ASOT on Skool.<br>
+            2. Study course modules.<br>
+            3. Take HTML quizzes online.<br>
+            4. Submit via email.<br>
+            5. Receive grades & certificates.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:Apostolicsot@gmail.com">Apostolicsot@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="container">
+      <h2 class="section-title">Programs & Core Modules</h2>
+
+      <div class="course-grid">
+
+        <div class="course-card">
+          <div class="course-tag">Module 101</div>
+          <h3>Introduction to Apostolic Theology</h3>
+          <p>Foundational doctrines of the Apostles.</p>
+        </div>
+
+        <div class="course-card">
+          <div class="course-tag">Module 102</div>
+          <h3>Survey of the Old Testament</h3>
+          <p>Genesis–Malachi overview.</p>
+        </div>
+
+        <div class="course-card">
+          <div class="course-tag">Module 103</div>
+          <h3>Survey of the New Testa
